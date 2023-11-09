@@ -1,0 +1,99 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3252,         89]
+NotebookOptionsPosition[      2777,         72]
+NotebookOutlinePosition[      3174,         88]
+CellTagsIndexPosition[      3131,         85]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\</home/jose/Files/Complex Systems/proyecto/alltokens.csv\>\"", ",", 
+   " ", "\"\<Data\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.90848273419589*^9, 3.908482742221828*^9}, {
+  3.908482808078001*^9, 3.9084828585299273`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"cab2464d-78c9-47ee-a4f6-3c52244a2319"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"{", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"\"word_id\"", ",", "\"frace\"", ",", "\"patient_id\"", 
+             ",", "\"denied\"", ",", "\"document_id\"", ",", 
+             "\"sentence_id\"", ",", "\"token_cancer\""}], "}"}], ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"1", ",", "\"unidad\"", ",", "217231", ",", "\"[ O ]\"", 
+             ",", "2", ",", "1", ",", "\"CLINICAL_SERVICE\""}], "}"}], ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"2", ",", "\"quimioterapia\"", ",", "217231", ",", 
+             "\"[ O ]\"", ",", "2", ",", "1", ",", "\"TREATMENT_NAME\""}], 
+           "}"}], ",", 
+         TemplateBox[{"24354"}, "OutputSizeLimit`Skeleton"], ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"24367", ",", "\"ioban\"", ",", "242186", ",", "\"[ O ]\"",
+              ",", "998", ",", "7581", ",", "\"DRUG\""}], "}"}], ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"24368", ",", "\"ma\[NTilde]ana\"", ",", "242186", ",", 
+             "\"[ O ]\"", ",", "998", ",", "7585", ",", "\"IMPLICIT_DATE\""}],
+            "}"}], ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"24369", ",", "\"16 agosto 2019\"", ",", "242186", ",", 
+             "\"[ O , O , O ]\"", ",", "998", ",", "7585", ",", "\"DATE\""}], 
+           "}"}]}], "}"}], Short[#, 8]& ], "line" -> 4, "sessionID" -> 
+   21446433248952937845, "byteCount" -> 6883248, "size" -> 8, "stored" -> 
+   False, "expr" -> Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, 
+   "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{{3.908482827155154*^9, 3.908482859034286*^9}},
+ CellLabel->"Out[4]=",ExpressionUUID->"6374927a-f099-4ab1-9b21-85658cbe062a"]
+}, Open  ]]
+},
+WindowSize->{606, 665.25},
+WindowMargins->{{417, Automatic}, {45.75, Automatic}},
+FrontEndVersion->"13.3 for Linux x86 (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a3d0d697-f4d5-45ed-bb01-56d7cb5aa3e6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 361, 7, 74, "Input",ExpressionUUID->"cab2464d-78c9-47ee-a4f6-3c52244a2319"],
+Cell[944, 31, 1817, 38, 249, "Output",ExpressionUUID->"6374927a-f099-4ab1-9b21-85658cbe062a"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
