@@ -10,68 +10,1415 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3252,         89]
-NotebookOptionsPosition[      2777,         72]
-NotebookOutlinePosition[      3174,         88]
-CellTagsIndexPosition[      3131,         85]
+NotebookDataLength[     71317,       1443]
+NotebookOptionsPosition[     70335,       1419]
+NotebookOutlinePosition[     70727,       1435]
+CellTagsIndexPosition[     70684,       1432]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
- RowBox[{"Import", "[", 
-  RowBox[{
-  "\"\</home/jose/Files/Complex Systems/proyecto/alltokens.csv\>\"", ",", 
-   " ", "\"\<Data\>\""}], "]"}]], "Input",
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\</home/jose/Files/Complex Systems/proyecto/alltokens.csv\>\"", ",", 
+     " ", "\"\<Data\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"data", "[", 
+  RowBox[{"[", "1", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"data", "[", 
+     RowBox[{"[", 
+      RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "10"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", 
+      RowBox[{"Length", "[", 
+       RowBox[{"data", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], " ", "//", 
+  "TableView"}]}], "Input",
  CellChangeTimes->{{3.90848273419589*^9, 3.908482742221828*^9}, {
-  3.908482808078001*^9, 3.9084828585299273`*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"cab2464d-78c9-47ee-a4f6-3c52244a2319"],
+   3.908482808078001*^9, 3.9084828585299273`*^9}, {3.9084844818644037`*^9, 
+   3.90848450151126*^9}, {3.908484547006917*^9, 3.908484662513218*^9}, {
+   3.908484727536645*^9, 3.908484824939748*^9}, {3.908484865413252*^9, 
+   3.908484867772684*^9}, {3.908486205328807*^9, 3.90848620978706*^9}, 
+   3.908491365396964*^9},
+ CellLabel->"In[97]:=",ExpressionUUID->"cab2464d-78c9-47ee-a4f6-3c52244a2319"],
 
 Cell[BoxData[
- TemplateBox[<|"shortenedBoxes" -> TagBox[
-     RowBox[{"{", 
-       RowBox[{
-         RowBox[{"{", 
-           
-           RowBox[{"\"word_id\"", ",", "\"frace\"", ",", "\"patient_id\"", 
-             ",", "\"denied\"", ",", "\"document_id\"", ",", 
-             "\"sentence_id\"", ",", "\"token_cancer\""}], "}"}], ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"1", ",", "\"unidad\"", ",", "217231", ",", "\"[ O ]\"", 
-             ",", "2", ",", "1", ",", "\"CLINICAL_SERVICE\""}], "}"}], ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"2", ",", "\"quimioterapia\"", ",", "217231", ",", 
-             "\"[ O ]\"", ",", "2", ",", "1", ",", "\"TREATMENT_NAME\""}], 
-           "}"}], ",", 
-         TemplateBox[{"24354"}, "OutputSizeLimit`Skeleton"], ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"24367", ",", "\"ioban\"", ",", "242186", ",", "\"[ O ]\"",
-              ",", "998", ",", "7581", ",", "\"DRUG\""}], "}"}], ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"24368", ",", "\"ma\[NTilde]ana\"", ",", "242186", ",", 
-             "\"[ O ]\"", ",", "998", ",", "7585", ",", "\"IMPLICIT_DATE\""}],
-            "}"}], ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"24369", ",", "\"16 agosto 2019\"", ",", "242186", ",", 
-             "\"[ O , O , O ]\"", ",", "998", ",", "7585", ",", "\"DATE\""}], 
-           "}"}]}], "}"}], Short[#, 8]& ], "line" -> 4, "sessionID" -> 
-   21446433248952937845, "byteCount" -> 6883248, "size" -> 8, "stored" -> 
-   False, "expr" -> Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, 
-   "version" -> 1|>,
-  "OutputSizeLimitTemplate"]], "Output",
- CellChangeTimes->{{3.908482827155154*^9, 3.908482859034286*^9}},
- CellLabel->"Out[4]=",ExpressionUUID->"6374927a-f099-4ab1-9b21-85658cbe062a"]
+ RowBox[{"{", 
+  RowBox[{"\<\"patient_id\"\>", ",", "\<\"frace\"\>", 
+   ",", "\<\"document_id\"\>", ",", "\<\"token_cancer\"\>"}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.908491391384903*^9, 3.9084923501336813`*^9, 
+  3.9084928566198263`*^9, 3.908492900548449*^9},
+ CellLabel->"Out[98]=",ExpressionUUID->"40363569-aa3a-4843-8f47-fd16cd5a1805"],
+
+Cell[BoxData[
+ TableViewBox[{{"patient_id", "frace", "document_id", "token_cancer"}, {
+   217231, "quimioterapia", 2, "TREATMENT_NAME"}, {
+   217231, "41 a\[NTilde]os", 2, "AGE"}, {
+   217231, "Tumor maligno de mama", 2, "CANCER_CONCEPT"}, {
+   217231, "acetato", 2, "DRUG"}, {217231, "goserelina", 2, "DRUG"}, {
+   217231, "Politerapia Antineoplasica", 2, "TREATMENT_NAME"}, {
+   136631, "CARCINOMA DE MAMA", 0, "CANCER_CONCEPT"}, {
+   136631, "TAMOXIFENO", 0, "DRUG"}, {
+   136631, "TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA", 0, 
+    "CANCER_CONCEPT"}}, {Number, String}]], "Output",
+ CellChangeTimes->{3.908491391384903*^9, 3.9084923501336813`*^9, 
+  3.9084928566198263`*^9, 3.908492900550359*^9},
+ CellLabel->"Out[99]=",ExpressionUUID->"8137daf3-7843-4f6f-99d3-76478e4dfdd5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"nodos", " ", "=", " ", 
+  RowBox[{"{", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"GenerateGraph", "[", "data_", "]"}], ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "doc", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"i", "=", "2"}], ",", 
+      RowBox[{"i", "<", "100"}], ",", 
+      RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"nodos", ",", 
+        RowBox[{"Labeled", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "2"}], "]"}], "]"}], "<->", " ", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "3"}], "]"}], "]"}]}], ",", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "4"}], "]"}], "]"}]}], "]"}]}], "]"}]}], 
+     "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"GenerateGraph", "[", "data", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gp", " ", "=", " ", 
+   RowBox[{"Graph", "[", 
+    RowBox[{"nodos", ",", 
+     RowBox[{"VertexLabels", "\[Rule]", 
+      RowBox[{"Placed", "[", 
+       RowBox[{"Automatic", ",", "Center"}], "]"}]}], ",", 
+     RowBox[{"GraphLayout", "->", "\"\<GravityEmbedding\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"VertexCount", "[", "gp", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"gp", "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9084862156496077`*^9, 3.908486262926252*^9}, {
+   3.908486465510537*^9, 3.908486481110317*^9}, {3.908486556834914*^9, 
+   3.908486561938651*^9}, {3.908486990917314*^9, 3.9084870368362293`*^9}, {
+   3.908487073320373*^9, 3.908487233953959*^9}, {3.908487271792345*^9, 
+   3.908487393600058*^9}, {3.908491404579159*^9, 3.9084914154076967`*^9}, {
+   3.9084916631538353`*^9, 3.908491676162073*^9}, {3.908491748927265*^9, 
+   3.9084918611804934`*^9}, {3.9084920801153193`*^9, 3.908492132283533*^9}, {
+   3.908492220749302*^9, 3.9084922406440277`*^9}, {3.908492275803413*^9, 
+   3.908492300191559*^9}, {3.9084923436463337`*^9, 3.908492375839167*^9}, {
+   3.908492406447753*^9, 3.908492448227906*^9}, {3.908492496684328*^9, 
+   3.9084925803272333`*^9}, {3.908492737173973*^9, 3.9084928162289743`*^9}, {
+   3.908492852640856*^9, 3.908492852766472*^9}, {3.90849288465388*^9, 
+   3.908492921578165*^9}, 3.908493009923602*^9},
+ CellLabel->
+  "In[112]:=",ExpressionUUID->"e31dcae8-d4af-4216-ae18-7a85dcd58775"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.908492350296913*^9, 3.9084923775796843`*^9}, {
+   3.908492409337069*^9, 3.908492415646652*^9}, 3.908492449735035*^9, 
+   3.9084925428183117`*^9, {3.908492573875237*^9, 3.9084925807384787`*^9}, {
+   3.908492797745111*^9, 3.908492817038992*^9}, 3.908492856673174*^9, {
+   3.908492900602003*^9, 3.908492928959488*^9}, 3.908493011900991*^9},
+ CellLabel->
+  "Out[112]=",ExpressionUUID->"6c6fd3ee-d7f7-4464-8423-b4e3a906e285"],
+
+Cell[BoxData["61"], "Output",
+ CellChangeTimes->{{3.908492350296913*^9, 3.9084923775796843`*^9}, {
+   3.908492409337069*^9, 3.908492415646652*^9}, 3.908492449735035*^9, 
+   3.9084925428183117`*^9, {3.908492573875237*^9, 3.9084925807384787`*^9}, {
+   3.908492797745111*^9, 3.908492817038992*^9}, 3.908492856673174*^9, {
+   3.908492900602003*^9, 3.908492928959488*^9}, 3.908493011904907*^9},
+ CellLabel->
+  "Out[116]=",ExpressionUUID->"3bc18930-086f-402d-b9cc-e18de72c9499"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+      "quimioterapia", 2, "41 a\[NTilde]os", "Tumor maligno de mama", 
+       "acetato", "goserelina", "Politerapia Antineoplasica", 
+       "CARCINOMA DE MAMA", 0, "TAMOXIFENO", 
+       "TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA", "Primario", 5, 
+       "31 a\[NTilde]os", "trastuzumab", "CARLOS", 9, 
+       "QUIMIOTERAPIAANAMNESIS", 4, "TT : 1", 
+       "CA DE MAMA DUCTAL INFILTRANTE DE MAMA IZQUIERDA", "pT2N2M0", "CMI", 
+       "CARCINOMA DUCTAL INFILTRANTE DE", "CUADRANTECTOMIA : 1", 
+       "CARCINOMA DUCTAL INFILTRANTE", "PT2 2 3", "M0", "Trastuzumab", 
+       "Tamoxifeno", "TUMOR MALIGNO DE LA PROLONGACION AXILAR DE LA MAMA", 
+       "quimioterapia ambulatoria", "QUIMIOTERAPIA", "quimioterapia : 1", 6, 
+       "HTA", 10, "CA DE MAMA IZQUIERDA", "SARCOMA FUSOCELULAR DE ALTO GRADO",
+        "RESECCION POR CX", "LLAMARON", 
+       "TUMOR MALIGNO DE LA PORCION DE LA MAMA", "LESION DE LA MAMA", 13, 
+       "74 A\[NTilde]os", 12, 
+       "TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA de torax", 
+       "cirugia plastica", 11, "LESION", "74 A\[CapitalNTilde]OS", 15, 
+       "TRATAMINTO FARMACOLOGICO CORESPONDIENTE", 3, "CANCER DE MAMA", 
+       "T4BN1M1", "carcinoma ductal infiltrante mod desmopasico", 
+       "CUADRANTECTOMA", "tumoral", "carcinoma metastasico primario mama", 
+       "Acetato"}, {
+      Null, {{1, 2}, {3, 2}, {4, 2}, {5, 2}, {6, 2}, {7, 2}, {8, 9}, {10, 
+       9}, {11, 9}, {12, 9}, {8, 9}, {10, 9}, {10, 9}, {7, 13}, {1, 13}, {14, 
+       13}, {4, 13}, {15, 13}, {16, 17}, {18, 19}, {20, 19}, {21, 19}, {22, 
+       19}, {23, 19}, {24, 19}, {25, 19}, {26, 19}, {27, 19}, {28, 19}, {29, 
+       19}, {30, 19}, {31, 19}, {12, 19}, {32, 19}, {33, 19}, {34, 35}, {21, 
+       35}, {22, 35}, {23, 35}, {24, 35}, {25, 35}, {26, 35}, {27, 35}, {28, 
+       35}, {29, 35}, {30, 35}, {1, 35}, {1, 35}, {1, 35}, {31, 35}, {12, 
+       35}, {1, 35}, {1, 35}, {36, 37}, {38, 37}, {39, 37}, {40, 37}, {41, 
+       37}, {40, 37}, {36, 37}, {38, 37}, {39, 37}, {41, 37}, {42, 37}, {16, 
+       37}, {43, 44}, {45, 44}, {11, 44}, {43, 46}, {45, 46}, {47, 46}, {48, 
+       46}, {36, 49}, {38, 49}, {39, 49}, {40, 49}, {41, 49}, {11, 49}, {12, 
+       49}, {50, 49}, {12, 49}, {45, 49}, {36, 49}, {38, 49}, {39, 49}, {40, 
+       49}, {41, 49}, {16, 49}, {51, 52}, {53, 52}, {34, 54}, {55, 54}, {56, 
+       54}, {57, 54}, {58, 54}, {59, 54}, {60, 54}, {61, 54}}}, {
+      EdgeLabels -> {
+        UndirectedEdge["CARLOS", 9] -> "CANCER_CONCEPT", 
+         UndirectedEdge["Primario", 0] -> "CANCER_CONCEPT", 
+         UndirectedEdge["quimioterapia", 5] -> "TREATMENT_NAME", 
+         UndirectedEdge["CARLOS", 11] -> "CANCER_CONCEPT", 
+         UndirectedEdge["Tamoxifeno", 6] -> "DRUG", 
+         UndirectedEdge["CUADRANTECTOMA", 3] -> "SURGERY", 
+         UndirectedEdge["cirugia plastica", 12] -> "SURGERY", 
+         UndirectedEdge["Tumor maligno de mama", 5] -> "CANCER_CONCEPT", 
+         UndirectedEdge["SARCOMA FUSOCELULAR DE ALTO GRADO", 11] -> 
+         "CANCER_CONCEPT", UndirectedEdge["Primario", 11] -> "CANCER_CONCEPT",
+          UndirectedEdge["RESECCION POR CX", 11] -> "SURGERY", 
+         UndirectedEdge["HTA", 10] -> "COMORBIDITY", 
+         UndirectedEdge["CARCINOMA DE MAMA", 0] -> "CANCER_CONCEPT", 
+         UndirectedEdge["CARCINOMA DUCTAL INFILTRANTE DE", 6] -> 
+         "CANCER_CONCEPT", UndirectedEdge["TAMOXIFENO", 0] -> "DRUG", 
+         UndirectedEdge["Politerapia Antineoplasica", 2] -> "TREATMENT_NAME", 
+         UndirectedEdge["TRATAMINTO FARMACOLOGICO CORESPONDIENTE", 15] -> 
+         "TREATMENT_NAME", UndirectedEdge["CA DE MAMA IZQUIERDA", 11] -> 
+         "CANCER_CONCEPT", 
+         UndirectedEdge["SARCOMA FUSOCELULAR DE ALTO GRADO", 10] -> 
+         "CANCER_CONCEPT", UndirectedEdge["74 A\[NTilde]os", 13] -> "AGE", 
+         UndirectedEdge["CARLOS", 10] -> "CANCER_CONCEPT", 
+         UndirectedEdge["PT2 2 3", 4] -> "TNM", 
+         UndirectedEdge["LESION DE LA MAMA", 13] -> "CANCER_CONCEPT", 
+         UndirectedEdge["CUADRANTECTOMIA : 1", 6] -> "SURGERY", 
+         UndirectedEdge["CARCINOMA DUCTAL INFILTRANTE DE", 4] -> 
+         "CANCER_CONCEPT", 
+         UndirectedEdge["carcinoma metastasico primario mama", 3] -> 
+         "CANCER_CONCEPT", UndirectedEdge["74 A\[NTilde]os", 11] -> "AGE", 
+         UndirectedEdge["pT2N2M0", 4] -> "TNM", UndirectedEdge["acetato", 2] -> 
+         "DRUG", UndirectedEdge["QUIMIOTERAPIAANAMNESIS", 4] -> 
+         "TREATMENT_NAME", UndirectedEdge["LESION", 11] -> "CANCER_CONCEPT", 
+         UndirectedEdge["quimioterapia : 1", 6] -> "TREATMENT_NAME", 
+         UndirectedEdge["Acetato", 3] -> "DRUG", UndirectedEdge["HTA", 11] -> 
+         "COMORBIDITY", UndirectedEdge["74 A\[NTilde]os", 12] -> "AGE", 
+         UndirectedEdge["Primario", 4] -> "CANCER_CONCEPT", 
+         UndirectedEdge["QUIMIOTERAPIA", 4] -> "TREATMENT_NAME", 
+         UndirectedEdge["TT : 1", 4] -> "TREATMENT_NAME", 
+         UndirectedEdge["Politerapia Antineoplasica", 5] -> "TREATMENT_NAME", 
+         UndirectedEdge[
+          "TUMOR MALIGNO DE LA PROLONGACION AXILAR DE LA MAMA", 6] -> 
+         "CANCER_CONCEPT", UndirectedEdge["31 a\[NTilde]os", 5] -> "AGE", 
+         UndirectedEdge["CA DE MAMA DUCTAL INFILTRANTE DE MAMA IZQUIERDA", 4] -> 
+         "CANCER_CONCEPT", UndirectedEdge["Tamoxifeno", 4] -> "DRUG", 
+         UndirectedEdge["TUMOR MALIGNO DE LA PORCION DE LA MAMA", 10] -> 
+         "CANCER_CONCEPT", UndirectedEdge["LLAMARON", 10] -> "DRUG", 
+         UndirectedEdge["CMI", 6] -> "CANCER_CONCEPT", 
+         UndirectedEdge["tumoral", 3] -> "CANCER_CONCEPT", 
+         UndirectedEdge["CANCER DE MAMA", 3] -> "CANCER_CONCEPT", 
+         UndirectedEdge["CUADRANTECTOMIA : 1", 4] -> "SURGERY", 
+         UndirectedEdge["LLAMARON", 11] -> "DRUG", 
+         UndirectedEdge["CA DE MAMA DUCTAL INFILTRANTE DE MAMA IZQUIERDA", 6] -> 
+         "CANCER_CONCEPT", UndirectedEdge["trastuzumab", 5] -> "DRUG", 
+         UndirectedEdge["TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA", 11] -> 
+         "CANCER_CONCEPT", UndirectedEdge["M0", 6] -> "TNM", 
+         UndirectedEdge[
+          "TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA de torax", 12] -> 
+         "CANCER_CONCEPT", UndirectedEdge["LESION DE LA MAMA", 12] -> 
+         "CANCER_CONCEPT", 
+         UndirectedEdge["carcinoma ductal infiltrante mod desmopasico", 3] -> 
+         "CANCER_CONCEPT", 
+         UndirectedEdge["TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA", 0] -> 
+         "CANCER_CONCEPT", UndirectedEdge["quimioterapia ambulatoria", 4] -> 
+         "TREATMENT_NAME", UndirectedEdge["RESECCION POR CX", 10] -> 
+         "SURGERY", UndirectedEdge["CMI", 4] -> "CANCER_CONCEPT", 
+         UndirectedEdge["CARCINOMA DUCTAL INFILTRANTE", 6] -> 
+         "CANCER_CONCEPT", UndirectedEdge["PT2 2 3", 6] -> "TNM", 
+         UndirectedEdge["quimioterapia", 2] -> "TREATMENT_NAME", 
+         UndirectedEdge["M0", 4] -> "TNM", UndirectedEdge["Primario", 6] -> 
+         "CANCER_CONCEPT", UndirectedEdge["CA DE MAMA IZQUIERDA", 10] -> 
+         "CANCER_CONCEPT", UndirectedEdge["74 A\[CapitalNTilde]OS", 15] -> 
+         "AGE", UndirectedEdge["CARCINOMA DUCTAL INFILTRANTE", 4] -> 
+         "CANCER_CONCEPT", UndirectedEdge["T4BN1M1", 3] -> "TNM", 
+         UndirectedEdge["goserelina", 2] -> "DRUG", 
+         UndirectedEdge["Trastuzumab", 6] -> "DRUG", 
+         UndirectedEdge["pT2N2M0", 6] -> "TNM", 
+         UndirectedEdge["Trastuzumab", 4] -> "DRUG", 
+         UndirectedEdge["quimioterapia", 6] -> "TREATMENT_NAME", 
+         UndirectedEdge[
+          "TUMOR MALIGNO DE LA PROLONGACION AXILAR DE LA MAMA", 4] -> 
+         "CANCER_CONCEPT", UndirectedEdge["41 a\[NTilde]os", 2] -> "AGE", 
+         UndirectedEdge["Tumor maligno de mama", 2] -> "CANCER_CONCEPT", 
+         UndirectedEdge["TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA", 13] -> 
+         "CANCER_CONCEPT", UndirectedEdge["quimioterapia : 1", 3] -> 
+         "TREATMENT_NAME"}, GraphLayout -> "GravityEmbedding", VertexLabels -> {
+         Placed[Automatic, Center]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.5062860375325411, -0.4787433004652207}, {
+            0.5632459131834264, -0.6213846645862926}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.47173005548874114, -0.5061980577736263},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.36711832774795944`, -0.5752235766650109}, {
+            0.25478390833109854`, -0.7218066155301748}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.3174990530625772, -0.5564090332455673},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.3309627509785323, -0.03707325594453464}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.3940508114834511, -0.048519064685842085},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.38574845792154683`, -0.04701280264177839}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.4174314197858268, -0.052760912806432345},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.34060942107802117`, -0.038823411838778535`}, {0.501409858382349,
+             0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.4408120280882024, -0.0570027609270225},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.4958755982548568, -0.06699271921227191}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.46419263639057806, -0.061244609047612794},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.38021419779405585`, -0.3910114509609599}, {
+            0.550661305197872, -0.07693226590951431}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.48757324469295377, -0.0654864571682031},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5632459131834264, -0.6213846645862926}, {
+            0.5798802481868837, -0.7254899086419638}, {
+            0.536461989856373, -0.8215599756995191}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"AGE\"\>", {0.5498539515198997, -0.7214723201429059}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5632459131834264, -0.6213846645862926}, {
+            0.5004006810730793, -0.8007182906899486}, {
+            0.34921780319912576`, -0.9158434837983145}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.4562318581912761, -0.7686140741923035},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5632459131834264, -0.6213846645862926}, {
+            0.6435758582905438, -0.6461647403015397}, {
+            0.6969998992247901, -0.7110710118291959}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.6301229062041083, -0.6662278382077442}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5632459131834264, -0.6213846645862926}, {
+            0.6634270562091114, -0.555211130792193}, {
+            0.7834903226584995, -0.5551109198406152}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.673368117920963, -0.5882477922134539}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5632459131834264, -0.6213846645862926}, {
+            0.4811306525921071, -0.6665808276760334}, {
+            0.3876970883793134, -0.6591123433245403}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.4754715007813699, -0.6402485039554164},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.34921780319912576`, -0.9158434837983145}, {
+            0.2728953255248912, -0.8329901338944488}, {
+            0.25478390833109854`, -0.7218066155301748}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.30200085576511215, -0.8188250496642446},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.3876970883793134, -0.6591123433245403}, {
+            0.33064463918605114`, -0.7103964564345897}, {
+            0.25478390833109854`, -0.7218066155301748}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.32124049835520596, -0.6904594794273575},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.7408784575209206, -0.3504336305949671}, \
+{-0.6525784664884154, -0.18581535870813717`}, {-0.48380456226994095`, \
+-0.1057439336539967}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.6294697886812988, -0.2100936094569133},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.7408784575209206, -0.3504336305949671}, \
+{-0.5721045533024434, -0.2703622055408223}, {-0.48380456226994095`, \
+-0.1057439336539967}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.5952132311095628, -0.24608395479205059},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.48380456226994095`, -0.1057439336539967}, \
+{-0.6375260509981276, -0.30368562595464044`}, {-0.8787299314021446, \
+-0.37174367269194963`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.6626472651033861, -0.26638857901222746},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.48380456226994095`, -0.1057439336539967}, \
+{-0.6413672859803499, -0.29798260854280373`}, {-0.8787299314021446, \
+-0.37174367269194963`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.6812672468360428, -0.23874380317297317},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.48380456226994095`, -0.1057439336539967}, \
+{-0.7250084426739556, -0.17380198039130418`}, {-0.8787299314021446, \
+-0.37174367269194963`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.6998872285686994, -0.21109902733371888},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.48380456226994095`, -0.1057439336539967}, \
+{-0.44410288314778207`, -0.17349752450410524`}, {-0.4482529992109936, \
+-0.251916584271898}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.4660287807404673, -0.17883025896294735},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.48380456226994095`, -0.1057439336539967}, \
+{-0.3085670032382784, 0.09102065871781607}, {-0.053956971915433805`, 
+            0.15883097398327672`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.2688807670926874, 0.02654352016464001},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.4482529992109936, -0.251916584271898}, \
+{-0.37573099561216317`, -0.3987911207114897}, {-0.3960334713817222, \
+-0.5613315154998628}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.4221432352963579, -0.4066240498858804},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.4482529992109936, -0.251916584271898}, \
+{-0.5901424115186702, -0.14107118538543992`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.5479188640199286, -0.11117142594275942},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.053956971915433805`, 0.15883097398327672`}, {
+            0.29830657183751036`, 0.24143987470460115`}, {0.6378709436246424, 
+            0.11650040076390278`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.2919569858546043, 0.13766568737358975},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.053956971915433805`, 0.15883097398327672`}, {
+            0.20600019996491187`, 0.30122347608976324`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.22372644323345758, 0.21791845154509581},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.053956971915433805`, 
+            0.15883097398327672`}, {-0.3295156929851268, \
+-0.0034142387106536522`}, {-0.6475847288288636, 0.02957373238637917}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.3417228434603658, 0.05264841020088788},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.053956971915433805`, 
+            0.15883097398327672`}, {-0.3720260077591719, 
+            0.19181894508031003`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.3598188572839316, 0.13575629616876808},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.25478390833109854`, -0.7218066155301748}, {
+            0.2135486443797497, -0.8633987374062333}, {
+            0.1011822560115272, -0.9589103635864205}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"AGE\"\>", {0.17798308217131287, -0.8403584895582976}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.25478390833109854`, -0.7218066155301748}, {
+            0.13046254270693872`, -0.7141123279758829}, {
+            0.030906698500140273`, -0.6392548774723035}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.1428453034156194, -0.6805307465012391}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.7286603658092856, 
+            0.4407796725225075}, {-0.7484477285387119, 
+            0.5772687555940131}, {-0.6898358480257527, 0.702110483330459}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.7092481069175192, 0.5714450779264832},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.7286603658092856, 
+            0.4407796725225075}, {-0.7748532884201101, 
+            0.30057593209423017`}, {-0.8905943928538869, 
+            0.20895239977933322`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.8096273793315862, 0.32486603615092036},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.7286603658092856, 
+            0.4407796725225075}, {-0.6264416562986553, 
+            0.24733804800150663`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.6881225473190746, 0.23517670245444333},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6248641127926025, -0.23248252873777941`}, {
+            0.5790200887833701, -0.05604003936213233}, {0.6378709436246424, 
+            0.11650040076390278`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.6313675282086224, -0.05799106398693832},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.8505401099557007, 0.04670321229792722}, {
+            0.9896691267278821, -0.12863343109902026`}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.8137700351762622, -0.006066515167558739},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.6341227719301309, 0.03320978554862948}, {
+            0.5851455192960304, -0.03426320236806024}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.6115082314603364, 0.04111859919792127},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.6062298007127859, 0.26182778274226504`}, {0.6598105246918942, 
+            0.40057329040045175`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {0.6488407341582683, 0.25853684558217727}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.5161331549619601, 0.3152477961670867}, {0.5239010903370698, 
+            0.5481861475565424}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.5808860169808561, 0.3323432741602226},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.7410064833357635, 0.1105095899331598}, {0.8238127719950978, 
+            0.04873623059128018}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.7308418578098701, 0.08261831567759148},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.547539358582225, 0.03120328729379878}, {0.4251723764990487, 
+            0.009715743961372869}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {0.5315216600618455, 0.06310807236263782},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.7124080945038732, 0.2747485633666451}, {0.8617454384137315, 
+            0.3658343775326607}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.7498081910191869, 0.24116738914828173},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.5777515208941129, 0.3884465414037381}, {0.6772551995171581, 
+            0.6485774052758186}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {0.6575630715709002, 0.3825389030198607}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.6476666954256308, 0.3653130272878029}, {0.7928058789607131, 
+            0.5676451732108818}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {0.7153384112926777, 0.3420727869873923}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.7605969666270902, 0.2225930873861412}, {0.9214559509441274, 
+            0.24361027181253414`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.7796634472843849, 0.18005533628821846}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.4456459206754369, 0.1818911065982574}, {0.3211593634431762, 
+            0.3422952864870519}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.4795151535339093, 0.22939784362547733}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.4781063405294619, 0.24269607175798644`}, {0.4141903898687609, 
+            0.43599590887883455`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.5260306667467016, 0.27624815482136866},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.7772770565686982, -0.055356868387507974`}, {
+            0.7990616449065371, -0.27557134792348714`}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.7184662942655897, -0.07953547357979218},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6378709436246424, 0.11650040076390278`}, {
+            0.8036254662667759, 0.114006306004302}, {0.9406347862196025, 
+            0.02068305846621321}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.7892528649221224, 0.068591729615058},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5851455192960304, -0.03426320236806024}, {
+            0.4965873191179434, 0.10881101423237512`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.5432776888391897, 0.12137136336942733},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6598105246918942, 0.40057329040045175`}, {
+            0.599145295731152, 0.31502950980725153`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {0.5806101915371216, 0.33878960975368333}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.5239010903370698, 0.5481861475565424}, {
+            0.5533325071271535, 0.40922235353852054`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.5126554743597094, 0.41259603833172864},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.8238127719950978, 0.04873623059128018}, {
+            0.6283708604113782, 0.11451064280718522`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.6626113151887234, 0.16287107984909754},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.4251723764990487, 0.009715743961372869}, {
+            0.42319758966886756`, 0.15479645881663892`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {0.46329111744069884, 0.1433608365341439},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.8617454384137315, 0.3658343775326607}, {
+            0.6949019156619021, 0.2673698163150804}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.6815776483980402, 0.3214201533197878},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.6772551995171581, 0.6485774052758186}, {
+            0.6450682503750891, 0.43641486602114543`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {0.5893325289497535, 0.4627916671913668}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.7928058789607131, 0.5676451732108818}, {
+            0.690703755287126, 0.3786161480721437}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {0.647107868671531, 0.42232555115889836}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.9214559509441274, 0.24361027181253414`}, {
+            0.706423556069081, 0.19730118657545775`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.7114329046632382, 0.2603081004597245}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.3211593634431762, 0.3422952864870519}, {
+            0.4210780145197831, 0.33668818203785933`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.4112846109127626, 0.3096506077969834}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.4141903898687609, 0.43599590887883455`}, {
+            0.4816486210913429, 0.36958383926991295`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {0.45780012412555493, 0.3565009189928747},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.2353438737435174, 0.6279033141307107}, {
+            0.42101147381650256`, 0.49236451931463754`}, {0.501409858382349, 
+            0.2770059291069149}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.3683768660629332, 0.4524546216188128},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{0.2353438737435174, 0.6279033141307107}, {
+            0.038393055852084676`, 
+            0.6605053269340097}, {-0.10808771167013953`, 
+            0.7961368153614057}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {0.06362808103668893, 0.7120200647460582},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.9715302830579593, -0.10608961505835612`}, \
+{-0.9828680822699081, 0.06474055061957634}, {-0.8905943928538869, 
+            0.20895239977933322`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"COMORBIDITY\"\>", {-0.9531152789945615, 0.05709690467477366},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.9715302830579593, -0.10608961505835612`}, \
+{-0.8792565936419412, 0.03812223410139307}, {-0.8905943928538869, 
+            0.20895239977933322`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"COMORBIDITY\"\>", {-0.9090093969172849, 0.04576588004620346},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.9715302830579593, -0.10608961505835612`}, \
+{-0.8318660881625877, 0.015011907648092614`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"COMORBIDITY\"\>", {-0.8190539402645429, -0.015581752539951726},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.9715302830579593, -0.10608961505835612`}, \
+{-0.787248923724235, -0.09152779032006948}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"COMORBIDITY\"\>", {-0.80006107162228, -0.06093413013202517},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.792614741733179, 
+            0.2466866782461892}, {-0.691364219508575, 0.21889783958039644`}}],
+            0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.7916754869673054, 0.22787123181403673},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.7893438706292764, 
+            0.18116356111354284`}, {-0.691364219508575, 
+            0.21889783958039644`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.7902831253951565, 0.199979007545693},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.8154199053686881, 
+            0.12573912000846107`}, {-0.8043125406853799, 
+            0.01414933575972821}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.8338172522882612, 0.11759059742132613},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.8794870281705807, 
+            0.0973626155306027}, {-0.8043125406853799, 0.01414933575972821}}],
+            0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.8610896812510058, 0.10551113811773521},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.8770581172647521, 
+            0.1287011095823018}, {-0.9137983587370848, 0.05608117436014037}}],
+            0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {-0.8914953900161424, 0.13089250945791295},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.927334634326216, 
+            0.13633246455717624`}, {-0.9137983587370848, 
+            0.05608117436014037}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {-0.9128973615748295, 0.13414106468156067},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.8758129862530017, 
+            0.29348860537274685`}, {-0.8137396363067761, 
+            0.3527487037838042}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.8622327558606446, 0.28623038473986645}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.828521042907661, 
+            0.2682124981903958}, {-0.8137396363067761, 0.3527487037838042}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.8421012733000186, 0.275470718823271}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8905943928538869, 
+            0.20895239977933322`}, {-0.9153184029519875, 
+            0.33827946506191786`}, {-0.8647703387498966, 
+            0.4598593141133054}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.8776823658018917, 0.3344058569463193},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.691364219508575, 
+            0.21889783958039644`}, {-0.638341876521959, 
+            0.13143491814206307`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.6562217866651382, 0.1273003503309676},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.691364219508575, 
+            0.21889783958039644`}, {-0.7006070718154814, 
+            0.11703665382472032`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.6827271616723006, 0.12117122163580799},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8043125406853799, 
+            0.01414933575972821}, {-0.7284850340632566, 
+            0.047633972559114425`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.7270283425209874, 0.03283248090300986},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8043125406853799, 
+            0.01414933575972821}, {-0.7234122354509884, \
+-0.003910904413006683}, {-0.6475847288288636, 0.02957373238637917}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.7248689269932562, 0.010890587243097546},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.9137983587370848, 
+            0.05608117436014037}, {-0.776332640218896, 
+            0.08660382158569761}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {-0.7788360228448109, 0.06146240746683525},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.9137983587370848, 
+            0.05608117436014037}, {-0.7850504473470532, \
+-0.0009489148391775753}, {-0.6475847288288636, 0.02957373238637917}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {-0.7825470647211374, 0.0241924992796843},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8137396363067761, 
+            0.3527487037838042}, {-0.677519048800345, 
+            0.21848385521890468`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.7080399345700001, 0.20279206160854552}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.8137396363067761, 
+            0.3527487037838042}, {-0.783805316335291, 
+            0.16383858095127607`}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {-0.7532844305656398, 0.1795303745616378}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.4318947566943634, -0.768041072828427}, \
+{-0.4449705476373274, -0.6593071013672488}, {-0.3960334713817222, \
+-0.5613315154998628}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.4139641140380428, -0.6646862941641449},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.4318947566943634, -0.768041072828427}, \
+{-0.565970763283412, -0.7763811359566699}, {-0.6824966383962376, \
+-0.7095406345743505}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.5571956975453005, -0.7387908537013887},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.3960334713817222, -0.5613315154998628}, \
+{-0.5174979202822166, -0.5570979295208704}, {-0.6165736055226336, \
+-0.48670230329960473`}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"AGE\"\>", {-0.5063035384521779, -0.5240169093997338}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.6165736055226336, -0.48670230329960473`}, \
+{-0.6161093722682238, -0.6080099238680182}, {-0.6824966383962376, \
+-0.7095406345743505}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"AGE\"\>", {-0.6495351219594356, -0.5981214689369776}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.6165736055226336, -0.48670230329960473`}, \
+{-0.7095205725286462, -0.2332159539525473}, {-0.6475847288288636, 
+            0.02957373238637917}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"AGE\"\>", {-0.6320791671757486, -0.22856428545661278}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.6824966383962376, -0.7095406345743505}, \
+{-0.7369321552802135, -0.6794943453543688}, {-0.7658390789796896, \
+-0.6244453239593515}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.7241678586879636, -0.666992979266851},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.6824966383962376, -0.7095406345743505}, \
+{-0.5928909971540288, -0.732661543217614}, {-0.5308097234435225, \
+-0.801288526346692}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {-0.6066531809198801, -0.7554145804605212},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.6475847288288636, 
+            0.02957373238637917}, {-0.601358566308957, 
+            0.26322072156138066`}, {-0.43415306043912594`, 
+            0.4328382102194608}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.5408688946339948, 0.23120597130291998},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.056238197157467695`, -0.8309881252175346}, \
+{-0.07093853212883638, -0.8929966186147575}, {-0.1173444044795513, \
+-0.9366732498153554}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"AGE\"\>", {-0.0867913008185095, -0.883830687516445}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.1173444044795513, -0.9366732498153554}, \
+{-0.19994280994453673`, -0.9624140092843366}, {-0.28307033715052343`, \
+-0.9384369889520263}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"TREATMENT_NAME\"\>", {-0.20020737081503737, -0.9375551193836908},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 
+            0.7961368153614057}, {-0.21482024149434062`, 
+            0.7233443219164952}, {-0.3439964783814684, 0.7213244584849834}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.22604209502580397, 0.7587306369231945},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 
+            0.7961368153614057}, {-0.22903014935224128`, 
+            0.838505378061854}, {-0.30667829675631797`, 0.9404511162881559}}],
+            0.022295860127398176`]}, 
+         InsetBox["\<\"TNM\"\>", {-0.20738300421322875, 0.8682939658247808}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 
+            0.7961368153614057}, {-0.05521423619530139, 
+            0.7087229705091137}, {-0.05918987310289081, 0.6066397740866472}}],
+            0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.08363879238651517, 0.7013882947240264},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 
+            0.7961368153614057}, {-0.27600232586141166`, 
+            0.7797845010923191}, {-0.4251891951049984, 0.8585626318536903}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"SURGERY\"\>", {-0.266638453387569, 0.827349723607548}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 
+            0.7961368153614057}, {-0.025936228299375565`, 
+            0.8678960199527326}, {0.08214943465676328, 0.8825840806459886}}], 
+           0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.012969138506688127, 0.8393604480036971},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 
+            0.7961368153614057}, {-0.10602642496339088`, 
+            0.8980235629513285}, {-0.04822108601192765, 0.9819503228437876}}],
+            0.022295860127398176`]}, 
+         InsetBox["\<\"CANCER_CONCEPT\"\>", {-0.07815439884103359, 0.8890435691025966},
+           ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}, {
+         {Arrowheads[0.], 
+          ArrowBox[
+           BezierCurveBox[{{-0.10808771167013953`, 0.7961368153614057}, {
+            0.04197008897736596, 0.9244345672084642}, {0.23787031805760916`, 
+            0.9489449101371981}}], 0.022295860127398176`]}, 
+         InsetBox["\<\"DRUG\"\>", {0.06489130319373482, 0.8725408627493019}, 
+          ImageScaled[{0.5, 0.5}],
+          BaseStyle->"Graphics"]}}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {
+         DiskBox[{0.38021419779405585`, -0.3910114509609599}, 
+          0.022295860127398176], 
+         InsetBox["\<\"quimioterapia\"\>", {0.38021419779405585, -0.3910114509609599},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.5632459131834264, -0.6213846645862926}, 
+          0.022295860127398176], 
+         InsetBox["2", {0.5632459131834264, -0.6213846645862926},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.536461989856373, -0.8215599756995191}, 
+          0.022295860127398176], 
+         InsetBox["\<\"41 a\[NTilde]os\"\>", {0.536461989856373, -0.8215599756995191},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.34921780319912576`, -0.9158434837983145}, 
+          0.022295860127398176], 
+         InsetBox["\<\"Tumor maligno de mama\"\>", {0.34921780319912576, -0.9158434837983145},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.6969998992247901, -0.7110710118291959}, 
+          0.022295860127398176], 
+         InsetBox["\<\"acetato\"\>", {0.6969998992247901, -0.7110710118291959},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.7834903226584995, -0.5551109198406152}, 
+          0.022295860127398176], 
+         InsetBox["\<\"goserelina\"\>", {0.7834903226584995, -0.5551109198406152},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.3876970883793134, -0.6591123433245403}, 
+          0.022295860127398176], 
+         InsetBox["\<\"Politerapia Antineoplasica\"\>", {0.3876970883793134, -0.6591123433245403},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.7408784575209206, -0.3504336305949671}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CARCINOMA DE MAMA\"\>", {-0.7408784575209206, -0.3504336305949671},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.48380456226994095`, -0.1057439336539967}, 
+          0.022295860127398176], 
+         InsetBox["0", {-0.48380456226994095, -0.1057439336539967},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.8787299314021446, -0.37174367269194963`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TAMOXIFENO\"\>", {-0.8787299314021446, -0.37174367269194963},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.4482529992109936, -0.251916584271898}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA\"\>", {-0.4482529992109936, -0.251916584271898},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.053956971915433805`, 0.15883097398327672`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"Primario\"\>", {-0.053956971915433805, 0.15883097398327672},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.25478390833109854`, -0.7218066155301748}, 
+          0.022295860127398176], 
+         InsetBox["5", {0.25478390833109854, -0.7218066155301748},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.1011822560115272, -0.9589103635864205}, 
+          0.022295860127398176], 
+         InsetBox["\<\"31 a\[NTilde]os\"\>", {0.1011822560115272, -0.9589103635864205},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.030906698500140273`, -0.6392548774723035}, 
+          0.022295860127398176], 
+         InsetBox["\<\"trastuzumab\"\>", {0.030906698500140273, -0.6392548774723035},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.7286603658092856, 0.4407796725225075}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CARLOS\"\>", {-0.7286603658092856, 0.4407796725225075},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.6898358480257527, 0.702110483330459}, 
+          0.022295860127398176], 
+         InsetBox["9", {-0.6898358480257527, 0.702110483330459},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.6248641127926025, -0.23248252873777941`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"QUIMIOTERAPIAANAMNESIS\"\>", {0.6248641127926025, -0.23248252873777941},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.6378709436246424, 0.11650040076390278`}, 
+          0.022295860127398176], 
+         InsetBox["4", {0.6378709436246424, 0.11650040076390278},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9896691267278821, -0.12863343109902026`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TT : 1\"\>", {0.9896691267278821, -0.12863343109902026},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.5851455192960304, -0.03426320236806024}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CA DE MAMA DUCTAL INFILTRANTE DE MAMA IZQUIERDA\"\>", {0.5851455192960304, -0.03426320236806024},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.6598105246918942, 0.40057329040045175`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"pT2N2M0\"\>", {0.6598105246918942, 0.40057329040045175},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.5239010903370698, 0.5481861475565424}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CMI\"\>", {0.5239010903370698, 0.5481861475565424},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.8238127719950978, 0.04873623059128018}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CARCINOMA DUCTAL INFILTRANTE DE\"\>", {0.8238127719950978, 0.04873623059128018},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.4251723764990487, 0.009715743961372869}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CUADRANTECTOMIA : 1\"\>", {0.4251723764990487, 0.009715743961372869},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.8617454384137315, 0.3658343775326607}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CARCINOMA DUCTAL INFILTRANTE\"\>", {0.8617454384137315, 0.3658343775326607},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.6772551995171581, 0.6485774052758186}, 
+          0.022295860127398176], 
+         InsetBox["\<\"PT2 2 3\"\>", {0.6772551995171581, 0.6485774052758186},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.7928058789607131, 0.5676451732108818}, 
+          0.022295860127398176], 
+         InsetBox["\<\"M0\"\>", {0.7928058789607131, 0.5676451732108818},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9214559509441274, 0.24361027181253414`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"Trastuzumab\"\>", {0.9214559509441274, 0.24361027181253414},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.3211593634431762, 0.3422952864870519}, 
+          0.022295860127398176], 
+         InsetBox["\<\"Tamoxifeno\"\>", {0.3211593634431762, 0.3422952864870519},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.4141903898687609, 0.43599590887883455`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TUMOR MALIGNO DE LA PROLONGACION AXILAR DE LA \
+MAMA\"\>", {0.4141903898687609, 0.43599590887883455},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.7990616449065371, -0.27557134792348714`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"quimioterapia ambulatoria\"\>", {0.7990616449065371, -0.27557134792348714},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9406347862196025, 0.02068305846621321}, 
+          0.022295860127398176], 
+         InsetBox["\<\"QUIMIOTERAPIA\"\>", {0.9406347862196025, 0.02068305846621321},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.2353438737435174, 0.6279033141307107}, 
+          0.022295860127398176], 
+         InsetBox["\<\"quimioterapia : 1\"\>", {0.2353438737435174, 0.6279033141307107},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.501409858382349, 0.2770059291069149}, 
+          0.022295860127398176], 
+         InsetBox["6", {0.501409858382349, 0.2770059291069149},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.9715302830579593, -0.10608961505835612`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"HTA\"\>", {-0.9715302830579593, -0.10608961505835612},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.8905943928538869, 0.20895239977933322`}, 
+          0.022295860127398176], 
+         InsetBox["10", {-0.8905943928538869, 0.20895239977933322},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.691364219508575, 0.21889783958039644`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CA DE MAMA IZQUIERDA\"\>", {-0.691364219508575, 0.21889783958039644},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.8043125406853799, 0.01414933575972821}, 
+          0.022295860127398176], 
+         InsetBox["\<\"SARCOMA FUSOCELULAR DE ALTO GRADO\"\>", {-0.8043125406853799, 0.01414933575972821},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.9137983587370848, 0.05608117436014037}, 
+          0.022295860127398176], 
+         InsetBox["\<\"RESECCION POR CX\"\>", {-0.9137983587370848, 0.05608117436014037},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.8137396363067761, 0.3527487037838042}, 
+          0.022295860127398176], 
+         InsetBox["\<\"LLAMARON\"\>", {-0.8137396363067761, 0.3527487037838042},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.8647703387498966, 0.4598593141133054}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TUMOR MALIGNO DE LA PORCION DE LA MAMA\"\>", {-0.8647703387498966, 0.4598593141133054},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.4318947566943634, -0.768041072828427}, 
+          0.022295860127398176], 
+         InsetBox["\<\"LESION DE LA MAMA\"\>", {-0.4318947566943634, -0.768041072828427},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.3960334713817222, -0.5613315154998628}, 
+          0.022295860127398176], 
+         InsetBox["13", {-0.3960334713817222, -0.5613315154998628},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.6165736055226336, -0.48670230329960473`}, 
+          0.022295860127398176], 
+         InsetBox["\<\"74 A\[NTilde]os\"\>", {-0.6165736055226336, -0.48670230329960473},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.6824966383962376, -0.7095406345743505}, 
+          0.022295860127398176], 
+         InsetBox["12", {-0.6824966383962376, -0.7095406345743505},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.7658390789796896, -0.6244453239593515}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TUMOR MALIGNO DE LA MAMA PARTE NO ESPECIFICADA de \
+torax\"\>", {-0.7658390789796896, -0.6244453239593515},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.5308097234435225, -0.801288526346692}, 
+          0.022295860127398176], 
+         InsetBox["\<\"cirugia plastica\"\>", {-0.5308097234435225, -0.801288526346692},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.6475847288288636, 0.02957373238637917}, 
+          0.022295860127398176], 
+         InsetBox["11", {-0.6475847288288636, 0.02957373238637917},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.43415306043912594`, 0.4328382102194608}, 
+          0.022295860127398176], 
+         InsetBox["\<\"LESION\"\>", {-0.43415306043912594, 0.4328382102194608},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.056238197157467695`, -0.8309881252175346}, 
+          0.022295860127398176], 
+         InsetBox["\<\"74 A\[CapitalNTilde]OS\"\>", {-0.056238197157467695, -0.8309881252175346},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.1173444044795513, -0.9366732498153554}, 
+          0.022295860127398176], 
+         InsetBox["15", {-0.1173444044795513, -0.9366732498153554},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.28307033715052343`, -0.9384369889520263}, 
+          0.022295860127398176], 
+         InsetBox["\<\"TRATAMINTO FARMACOLOGICO CORESPONDIENTE\"\>", {-0.28307033715052343, -0.9384369889520263},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.10808771167013953`, 0.7961368153614057}, 
+          0.022295860127398176], 
+         InsetBox["3", {-0.10808771167013953, 0.7961368153614057},
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.3439964783814684, 0.7213244584849834}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CANCER DE MAMA\"\>", {-0.3439964783814684, 0.7213244584849834},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.30667829675631797`, 0.9404511162881559}, 
+          0.022295860127398176], 
+         InsetBox["\<\"T4BN1M1\"\>", {-0.30667829675631797, 0.9404511162881559},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.05918987310289081, 0.6066397740866472}, 
+          0.022295860127398176], 
+         InsetBox["\<\"carcinoma ductal infiltrante mod desmopasico\"\>", {-0.05918987310289081, 0.6066397740866472},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.4251891951049984, 0.8585626318536903}, 
+          0.022295860127398176], 
+         InsetBox["\<\"CUADRANTECTOMA\"\>", {-0.4251891951049984, 0.8585626318536903},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.08214943465676328, 0.8825840806459886}, 
+          0.022295860127398176], 
+         InsetBox["\<\"tumoral\"\>", {0.08214943465676328, 0.8825840806459886},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.04822108601192765, 0.9819503228437876}, 
+          0.022295860127398176], 
+         InsetBox["\<\"carcinoma metastasico primario mama\"\>", {-0.04822108601192765, 0.9819503228437876},
+          
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.23787031805760916`, 0.9489449101371981}, 
+          0.022295860127398176], 
+         InsetBox["\<\"Acetato\"\>", {0.23787031805760916, 0.9489449101371981},
+          
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{1375.2145940727103`, Automatic}]], "Output",
+ CellChangeTimes->{{3.908492350296913*^9, 3.9084923775796843`*^9}, {
+   3.908492409337069*^9, 3.908492415646652*^9}, 3.908492449735035*^9, 
+   3.9084925428183117`*^9, {3.908492573875237*^9, 3.9084925807384787`*^9}, {
+   3.908492797745111*^9, 3.908492817038992*^9}, 3.908492856673174*^9, {
+   3.908492900602003*^9, 3.908492928959488*^9}, 3.908493012015996*^9},
+ CellLabel->
+  "Out[117]=",ExpressionUUID->"1bc00bc6-eec6-45d2-99fa-024dcfed8f5a"]
 }, Open  ]]
 },
-WindowSize->{606, 665.25},
-WindowMargins->{{417, Automatic}, {45.75, Automatic}},
+WindowSize->{1440, 758.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.3 for Linux x86 (64-bit) (July 24, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a3d0d697-f4d5-45ed-bb01-56d7cb5aa3e6"
@@ -88,12 +1435,17 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 361, 7, 74, "Input",ExpressionUUID->"cab2464d-78c9-47ee-a4f6-3c52244a2319"],
-Cell[944, 31, 1817, 38, 249, "Output",ExpressionUUID->"6374927a-f099-4ab1-9b21-85658cbe062a"]
+Cell[580, 22, 1189, 29, 72, "Input",ExpressionUUID->"cab2464d-78c9-47ee-a4f6-3c52244a2319"],
+Cell[1772, 53, 359, 7, 33, "Output",ExpressionUUID->"40363569-aa3a-4843-8f47-fd16cd5a1805"],
+Cell[2134, 62, 785, 13, 279, "Output",ExpressionUUID->"8137daf3-7843-4f6f-99d3-76478e4dfdd5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2956, 80, 2551, 54, 217, "Input",ExpressionUUID->"e31dcae8-d4af-4216-ae18-7a85dcd58775"],
+Cell[5510, 136, 488, 8, 33, "Output",ExpressionUUID->"6c6fd3ee-d7f7-4464-8423-b4e3a906e285"],
+Cell[6001, 146, 472, 7, 33, "Output",ExpressionUUID->"3bc18930-086f-402d-b9cc-e18de72c9499"],
+Cell[6476, 155, 63843, 1261, 1421, "Output",ExpressionUUID->"1bc00bc6-eec6-45d2-99fa-024dcfed8f5a"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
